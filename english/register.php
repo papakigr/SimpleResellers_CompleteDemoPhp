@@ -7,12 +7,24 @@ error_reporting(0);
 
 
  
- 	
+ 	$email_from="";
 
 	$subject = "Domain Request";
 	$headers ="Content-type:text/html; charset=UTF-8";
 	$headers  = 'MIME-Version: 1.0' . "\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "\n";
+
+
+	if($email_from!=""){
+		$headers  = 'MIME-Version: 1.0' . "\n";
+   		$headers .= 'Content-type: text/html; charset=utf-8' . "\n";
+		$headers .= 'From: '.$email_from."\n".
+		'Reply-To: '.$email_from."\n" .
+		'X-Mailer: PHP/' . phpversion();
+
+	}
+
+
 
 	$domainNames = $_POST['domainNames'];
 

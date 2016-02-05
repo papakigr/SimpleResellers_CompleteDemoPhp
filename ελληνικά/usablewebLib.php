@@ -241,7 +241,7 @@ class PapakiDomainNameSearch{
 	 
 	 	//Helper functions.
 	function getExtensions(){
-		$exts = array("ext_gr","ext_com","ext_net","ext_org","ext_gov","eu","com","net","edu","gov","org", "info", "mobi", "name", "ac","cc", "io","sh", "tv", "bz", "ws", "de", "ms", "gs", "in" ,"fm", "la","com.gr" );
+		$exts = array("ext_gr","ext_com","ext_net","ext_org","ext_gov","eu","com","net","edu","gov","org", "info", "mobi", "name", "ac","cc", "io","sh", "tv", "bz", "ws", "de", "ms", "gs", "in" ,"fm", "la","com.gr" , "at", "be", "biz", "biz_pl", "casa", "ch", "city", "club", "co", "co_uk", "coffee", "com_pl", "edu_pl", "email", "es", "estate", "holiday", "info_pl", "it", "me", "net_pl", "nl", "nom_pl", "org_pl", "parts", "party", "photography", "photos", "pl", "pro", "ru", "science", "shop_pl", "site", "top", "waw_pl", "website", "work" );
 		$selectedExt = array();
 		
 		 for ($i=0;$i<=count($exts)-1;$i++){

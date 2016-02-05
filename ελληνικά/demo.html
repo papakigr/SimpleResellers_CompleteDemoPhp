@@ -54,11 +54,11 @@ var dname = mai;
 // alert("Your domain name is "+dname+" correct");
 //var ext = mai.substring(dot,mai.length);
 //alert(ext);
-	
+
 if(dname.length>2 && dname.length<57)
 {
-	
-	
+
+
 		for(var j=0; j<dname.length; j++)
 		{
 		  var dh = dname.charAt(j);
@@ -66,7 +66,7 @@ if(dname.length>2 && dname.length<57)
 		   //alert("To hh einai "+hh+" correct");
 		  if((hh > 47 && hh<59) || (hh > 64 && hh<91) || (hh > 96 && hh<123)  || (hh > 944 && hh <970) || (hh > 912 && hh < 938) || hh==45 )
 		  {
-			 if((j==0 || j==dname.length-1) && hh == 45)	
+			 if((j==0 || j==dname.length-1) && hh == 45)
 		  	 {
 		 	  	 alert("Το Domain name δεν πρέπει να ξεκινάει με '-'");
 			      return false;
@@ -77,13 +77,13 @@ if(dname.length>2 && dname.length<57)
 			 return false;
 		  }
 		}
-	
+
 }
 else
 {
  alert("Το Domain name πρέπει να περιέχει τουλάχιστον 3 χαρακτήρες");
  return false;
-}	
+}
 
 return true;
 }
@@ -112,7 +112,7 @@ return true;
       <input type="checkbox" name="ext_gov" value=".gov.gr">
       .gov.gr |
       <input type="checkbox" name="eu" value=".eu">
-      .eu 
+      .eu
 	  <input type="checkbox" name="com" value=".com">
       .com
 	  <input type="checkbox" name="net" value=".net">
@@ -151,6 +151,86 @@ return true;
       .fm
 	   <input type="checkbox" name="la" value=".la">
       .la
+
+
+
+      <!-- New tlds added 05-02-2016 -->
+       <input type="checkbox" name="at" value=".at">
+       .at
+       <input type="checkbox" name="be" value=".be">
+       .be
+       <input type="checkbox" name="biz" value=".biz">
+       .biz
+       <input type="checkbox" name="biz_pl" value=".biz.pl">
+       .biz.pl
+       <input type="checkbox" name="casa" value=".casa">
+       .casa
+       <input type="checkbox" name="ch" value=".ch">
+       .ch
+       <input type="checkbox" name="city" value=".city">
+       .city
+       <input type="checkbox" name="club" value=".club">
+       .club
+       <input type="checkbox" name="co" value=".co">
+       .co
+       <input type="checkbox" name="co_uk" value=".co.uk">
+       .co.uk
+       <input type="checkbox" name="coffee" value=".coffee">
+       .coffee
+       <input type="checkbox" name="com_pl" value=".com.pl">
+       .com.pl
+       <input type="checkbox" name="edu_pl" value=".edu.pl">
+       .edu.pl
+       <input type="checkbox" name="email" value=".email">
+       .email
+       <input type="checkbox" name="es" value=".es">
+       .es
+       <input type="checkbox" name="estate" value=".estate">
+       .estate
+       <input type="checkbox" name="holiday" value=".holiday">
+       .holiday
+       <input type="checkbox" name="info_pl" value=".info.pl">
+       .info.pl
+       <input type="checkbox" name="it" value=".it">
+       .it
+       <input type="checkbox" name="me" value=".me">
+       .me
+       <input type="checkbox" name="net_pl" value=".net.pl">
+       .net.pl
+       <input type="checkbox" name="nl" value=".nl">
+       .nl
+       <input type="checkbox" name="nom_pl" value=".nom.pl">
+       .nom.pl
+       <input type="checkbox" name="org_pl" value=".org.pl">
+       .org.pl
+       <input type="checkbox" name="parts" value=".parts">
+       .parts
+       <input type="checkbox" name="party" value=".party">
+       .party
+       <input type="checkbox" name="photography" value=".photography">
+       .photography
+       <input type="checkbox" name="photos" value=".photos">
+       .photos
+       <input type="checkbox" name="pl" value=".pl">
+       .pl
+       <input type="checkbox" name="pro" value=".pro">
+       .pro
+       <input type="checkbox" name="ru" value=".ru">
+       .ru
+       <input type="checkbox" name="science" value=".science">
+       .science
+       <input type="checkbox" name="shop_pl" value=".shop.pl">
+       .shop.pl
+       <input type="checkbox" name="site" value=".site">
+       .site
+       <input type="checkbox" name="top" value=".top">
+       .top
+       <input type="checkbox" name="waw_pl" value=".waw.pl">
+       .waw.pl
+       <input type="checkbox" name="website" value=".website">
+       .website
+       <input type="checkbox" name="work" value=".work">
+       .work
 	  </td>
   </tr>
   </table>

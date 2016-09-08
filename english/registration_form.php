@@ -1,9 +1,16 @@
-<?PHP 
-	
-	$domainNames = $_POST['domainNames'];
+<?PHP
 
-		
-?>	
+//$domainNames = $_POST['domainNames'];
+for($kount=0;$kount<$_POST["cnt"]; $kount++ ){
+
+	if($_POST["box_".$kount]!=""){
+			$domainNames=$domainNames." ".$_POST["box_".$kount];
+	}
+}
+
+
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -12,7 +19,7 @@
 
 <script language="JavaScript">
      function check_data(form)
-    { 
+    {
       if (form.fullname.value.length < 1) {
 	   showMessage(form.fullname, "Fullname is required");
 	   return false;
@@ -38,30 +45,30 @@
 	    return showMessage(form.emailText, "Email is not valid");
 		return false;
 	}
-	 
- 
-	 
+
+
+
 	  if (form.address1.value.length < 1) {
 	showMessage(form.address1, "Address is required");
 	return false;
       }
 	  if (form.phoneNum.value.length > 0)
 	  {
-		if (form.phoneNum.value.search(/^\+[0-9]{1,3}\.[0-9]{1,14}$/) == -1){ 
+		if (form.phoneNum.value.search(/^\+[0-9]{1,3}\.[0-9]{1,14}$/) == -1){
 			showMessage(form.phoneNum, ' Phone number is invalid\n');
 			return false;
 		}
 	  }
 
-	 if (form.fax.value.length > 0) 
+	 if (form.fax.value.length > 0)
 	 {
 		if (form.fax.value.search(/^\+[0-9]{1,3}\.[0-9]{1,14}$/) == -1)
-		{ 
+		{
 			showMessage(form.fax, ' Fax number is invalid\n');
 			return false;
 	 	}
 	}
-    
+
 	if (form.city.value.length < 1) {
 	showMessage(form.city, "City is required");
 	return false;
@@ -70,14 +77,14 @@
 	showMessage(form.zip, "Postcode is required");
 	return false;
       }
- 
-	
-		//edw add ton neo usser
-	  form.submit();		     	  
-   } 
-	
 
-	
+
+		//edw add ton neo usser
+	  form.submit();
+   }
+
+
+
 	function CompareStrings(a,b){
 		if (a!=b)
 			return false;
@@ -85,7 +92,7 @@
 			return true;
 	}
 
-	
+
 function showMessage(frmObj, message)
 {
 	alert(message);
@@ -97,8 +104,8 @@ function showMessage(frmObj, message)
 }
 
 function CheckSelected(){
-	var grp = form1.businessTypeRadioButton	
-	
+	var grp = form1.businessTypeRadioButton
+
 	for (var i = 0; i < grp.length - 1; i++){
 		if(grp[i].checked){
 			switch(grp[i].value){
@@ -120,7 +127,7 @@ function CheckSelected(){
 }
 
 	function TrHide(bool){
-		if (bool==true){			
+		if (bool==true){
 			document.getElementById("afm_tr").style.display = 'none';
 			document.getElementById("list_tr").style.display = 'none';
 			document.getElementById("doy_tr").style.display = 'none';
@@ -162,17 +169,17 @@ function CheckSelected(){
         <input id="radio" type="radio" name="businessTypeRadioButton" onClick="return TrHide(3);" value="2">
         Public Organization</label>      </td>
     </tr>
-      
-	  
+
+
 	  <tr>
 	<td colspan="2"><div id="list_tr" style="display:none;">
 	<table width="100%">
-	
+
 		<tr>
 		<td width="40%">Company Type:</td>
 		<td width="60%" align="left">
-      
-         
+
+
           <select name="DropDownListCompanyType" id="DropDownListCompanyType">
 			<option value="ΑΕ">ΑΕ</option>
 			<option value="ΑΕΒΕΕ">ΑΕΒΕΕ</option>
@@ -180,11 +187,11 @@ function CheckSelected(){
 			<option value="ΕΕ">ΕΕ</option>
 			<option value="ΕΠΕ">ΕΠΕ</option>
 			<option value="ΟΕ">ΟΕ</option>
-          
+
          </select>	  </td> </tr>
 	  </table></div>	  </td></tr>
-	  
-	  
+
+
     <tr align="left">
       <td width="40%" align="right" valign="top" class="medgray"><div align="left">&nbsp;Fullname : </div></td>
       <td valign="middle">
@@ -202,8 +209,8 @@ function CheckSelected(){
       <td>
         <input name="lastname" type="text" id="lastname" size="32"></td>
     </tr>
-    
-	
+
+
 	<tr><td colspan="2">
   	<div id="afm_tr" style="display:none">
 	<table width="100%">
@@ -215,14 +222,14 @@ function CheckSelected(){
 	  </table>
         </div>
     </td></tr>
-	
+
      <tr>
     <td colspan="2"><div id="doy_tr" style="display:none">
       <table width="100%">
         <tr align="left" bordercolordark="#FFFFFF" bgcolor="#FFFFFF">
           <td align="left" width="40%" class="medgray"><div align="left">Tax Office : </div></td>
           <td align="left" width="60%"><select name="doy">
-          
+
             <option value="">[Select TaxOffice]</option>
             <option value="ΑΓ. ΑΘΑΝΑΣΙΟΥ">ΑΓ. ΑΘΑΝΑΣΙΟΥ </option>
             <option value="ΑΓ.ΑΝΑΡΓΥΡΩΝ">ΑΓ.ΑΝΑΡΓΥΡΩΝ </option>
@@ -833,15 +840,15 @@ function CheckSelected(){
 							<TD width="895" height="25"><IMG height="25" alt="" src="graphics/spacer.gif" width="1"></TD>
 	</TR>
 	<TR>
-							
+
 							<TD height="25" colspan="2"><input name="chkNewsletters" id="chkNewsletters" type="checkbox" checked="checked" value="1" />&nbsp;I would like to receive newsletters</TD>
 						</TR>
 						<TR>
-							
+
 							<TD colspan="2" class="black" height="1" style="padding:0"><IMG height="1" width="1" alt="" src="graphics/spacer.gif"></TD>
 						</TR>
 						<TR>
-							
+
 							<TD align="right" colspan="2">
 						  <input type="image" name="imgBtnContinue" id="imgBtnContinue" src="images/continueEN.gif" alt="" border="0" /></TD>
 						</TR>

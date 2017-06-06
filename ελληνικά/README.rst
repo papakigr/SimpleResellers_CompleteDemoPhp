@@ -23,7 +23,7 @@ Test environment
 .. code-block:: bash
 
     Αν θέλετε πρώτα να τεστάρετε το script σε test environment τότε μπορείτε να κάνετε τις εξής αλλαγές στο config.php:
-    Βάλτε το apikey του test environment και αλλάξτε το papaki_Post_url σε https://api-test.papaki.gr/register_url2.aspx
+    Βάλτε το apikey του test environment και αλλάξτε το papaki_Post_url σε https://api-test.papaki.com/register_url2.aspx
     
     
  
